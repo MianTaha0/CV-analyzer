@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>CV Uploader & Search</title>
+	<link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+	<header>
+		<h1>CV Uploader & Intelligent Search</h1>
+	</header>
+	<main>
+		<section class="card">
+			<h2>Upload CV</h2>
+			<form id="uploadForm">
+				<input type="file" id="cvFile" accept=".pdf,.docx,.txt" required />
+				<button type="submit">Upload</button>
+			</form>
+			<pre id="uploadResult"></pre>
+		</section>
+
+		<section class="card">
+			<h2>Search</h2>
+			<div class="grid">
+				<input type="text" id="searchName" placeholder="Name" />
+				<input type="text" id="searchEmail" placeholder="Email" />
+				<input type="number" step="0.1" id="searchExp" placeholder="Min experience (years)" />
+				<input type="text" id="searchText" placeholder="Contains text..." />
+			</div>
+			<div class="row">
+				<button id="searchBtn">Search</button>
+				<button id="voiceBtn">🎤 Voice Search</button>
+			</div>
+			<ul id="searchResults"></ul>
+		</section>
+
+		<section class="card">
+			<h2>AI Chat</h2>
+			<div id="chatBox"></div>
+			<div class="row">
+				<input type="text" id="chatInput" placeholder="Ask e.g. 'best Python developer'" />
+				<button id="chatSend">Send</button>
+			</div>
+		</section>
+	</main>
+	<script src="/static/app.js"></script>
+</body>
+</html>
